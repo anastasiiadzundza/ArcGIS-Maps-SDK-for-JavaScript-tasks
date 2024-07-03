@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Custom DynamicLayer | Sample | ArcGIS Maps SDK for JavaScript 4.29</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css" />
+
+    <style>
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #infoDiv {
+            padding: 5px 15px;
+            width: 300px;
+        }
+        #landslideReadMore {
+            width: 100%;
+            text-align: right;
+        }
+        #landslideReadMore a {
+            color: rgb(50, 50, 150);
+        }
+    </style>
+
+    <script src="https://js.arcgis.com/4.29/"></script>
+    <script src="ElevationLayer.js"></script>
+
+</head>
+
+<body>
+<div id="viewDiv"></div>
+<div id="infoDiv" class="esri-widget">
+    <h3>The 2014 Oso Landslide</h3>
+    <input id="landslideInput" type="checkbox" /> Use more detailed elevation data
+    <p id="landslideReadMore">
+        <a target="_blank" href="https://en.wikipedia.org/wiki/2014_Oso_mudslide">Read more</a>
+    </p>
+</div>
+</body>
+</html>
