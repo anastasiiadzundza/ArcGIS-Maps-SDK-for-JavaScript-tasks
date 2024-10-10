@@ -1,4 +1,4 @@
-<html>
+<html >
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -11,6 +11,7 @@
     <link disabled id="arcgis-maps-sdk-theme-dark" rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/dark/main.css" />
 
     <link id="arcgis-maps-sdk-theme-light" rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css" />
+    <script type="module" src="https://js.arcgis.com/map-components/4.30/arcgis-map-components.esm.js"></script>
     <script src="MappingApp.js"></script>
 
 </head>
@@ -53,12 +54,20 @@
         border: 1px solid var(--calcite-color-border-1);
         cursor: pointer;
     }
+
+    arcgis-map {
+        height: 100%;
+        width: 100%;
+    }
+
+    calcite-shell-panel {
+        width: 49px
+    }
 </style>
 
 <body>
-<calcite-loader></calcite-loader>
-<calcite-shell content-behind hidden>
-
+<!--<calcite-loader></calcite-loader>-->
+<calcite-shell > <!--content-behind hidden-->
     <calcite-navigation slot="header">
         <calcite-navigation-logo id="header-title" heading-level="1" slot="logo">
             <!-- Dynamically populated -->
@@ -92,7 +101,9 @@
             <div id="basemaps-container"></div>
         </calcite-panel>
         <calcite-panel heading="Legend" height-scale="l" data-panel-id="legend" hidden>
-            <div id="legend-container"></div>
+            <div id="legend-container">
+                <arcgis-legend position="bottom-left" reference-element="map"></arcgis-legend>
+            </div>
         </calcite-panel>
         <calcite-panel heading="Bookmarks" height-scale="l" data-panel-id="bookmarks" hidden>
             <div id="bookmarks-container"></div>
@@ -116,7 +127,7 @@
             </div>
         </calcite-panel>
     </calcite-shell-panel>
-    <div id="viewDiv"></div>
+    <arcgis-map item-id="210c5b77056846808c7a5ce93920be81" id="map"></arcgis-map>
 </calcite-shell>
 </body>
 </html>

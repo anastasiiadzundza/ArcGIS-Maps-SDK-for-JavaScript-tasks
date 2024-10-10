@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Popup with edit action | Sample | ArcGIS Maps SDK for JavaScript 4.28</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.28/"></script>
+    <script src="Editing.js"></script>
+
+    <style>
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #info {
+            background-color: white;
+            width: 250px;
+            padding: 13px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="viewDiv"></div>
+<div id="info" class="esri-widget">
+    <h3>Select a feature to display its popup</h3>
+    <h4>Edit the feature by clicking on the "Edit feature" action within the popup.</h4>
+</div>
+</body>
+</html>
